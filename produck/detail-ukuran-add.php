@@ -41,6 +41,8 @@ if (
             <link href="../css/animate.css" rel="stylesheet">
             <link href="../css/style.css" rel="stylesheet">
 
+            <link rel="stylesheet" href="as.css">
+
 
         </head>
 
@@ -58,7 +60,7 @@ if (
                     <?php include 'nav.php'; ?>
                     <div class="row wrapper border-bottom white-bg page-heading">
                         <div class="col-lg-10">
-                            <h2>Penambahan Data Kariawan</h2>
+                            <h2>Penambahan Data Produck Kategori</h2>
                             <ol class="breadcrumb">
                                 <li>
                                     <a href="../index.php">Home</a>
@@ -79,7 +81,7 @@ if (
                         <div class="col-lg-12">
                             <div class="ibox float-e-margins">
                                 <div class="ibox-title">
-                                    <h5>Form </h5>
+                                    <h5>Tambah Produck Kategori </h5>
                                     <div class="ibox-tools">
                                         <a class="collapse-link">
                                             <i class="fa fa-chevron-up"></i>
@@ -90,35 +92,25 @@ if (
                                     </div>
                                 </div>
                                 <div class="ibox-content">
-                                    <h3>Input Data Kariawan</h3>
-                                    <form class="form-horizontal m-t-md" action="kariawan-add-proses.php" method="POST" enctype="multipart/form-data">
-                                        <div class="form-group">
-                                            <label class="col-sm-2 col-sm-2 control-label">Nama</label>
-                                            <div class="col-sm-10">
-                                                <input type="text" class="form-control" name="nama">
+                                    <form class="form-horizontal m-t-md" action="produck-kategori-add-proses.php" method="POST" enctype="multipart/form-data">
+
+                                        <div id="formku">
+                                            <div class="form-group">
+                                                <label class="col-sm-2 col-sm-2 control-label">ukuran</label>
+                                                <div class="col-sm-6">
+                                                    <input type="text" class="form-control" name="nama">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-2 col-sm-2 control-label">Cm</label>
+                                                <div class="col-sm-6">
+                                                    <input type="text" class="form-control" name="nama">
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-2 control-label">Alamat</label>
-                                            <div class="col-sm-10">
-                                                <input type="text" class="form-control" name="alamat">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-2 control-label">No Telpon</label>
-                                            <div class="col-sm-10">
-                                                <input type="text" class="form-control" name="hp">
-                                            </div>
-                                        </div>
-                                        <span class="image-crop" hidden>
-                                            <img src="">
-                                        </span>
-                                        <div class="form-group">
-                                            <label class="col-sm-2 control-label">Foto</label>
-                                            <div class="col-sm-10">
-                                                <input type="file" class="form-control" name="file">
-                                            </div>
-                                        </div>
+                                        <div class="col-sm-4 col-sm-offset-2">
+                                            <a class="btn btn-primary" href='#' onclick="tambah_form(); return false;">+</a>
+                                        </div><br>
                                         <div class="hr-line-dashed"></div>
 
                                         <div class="form-group">
@@ -127,6 +119,15 @@ if (
                                             </div>
                                         </div>
                                     </form>
+
+                                    <div class="copy hide">
+                                        <div class="control-group input-group" style="margin-top:10px">
+                                            <input type="text" name="sa[]" class="form-control">
+                                            <div class="input-group-btn">
+                                                <button class="btn btn-danger remove" type="button"><i class="glyphicon glyphicon-remove"></i> Hapus</button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -182,6 +183,28 @@ if (
             <script src="../js/plugins/dualListbox/jquery.bootstrap-duallistbox.js"></script>
 
             <script>
+                function tambah_form() {
+                    var target = document.getElementById("formku");
+                    var a = document.createElement("div");
+                    var label = document.createElement("label");
+                    var tambah = document.createElement("input");
+                    target.appendChild(a);
+                    a.appendChild(label);
+                    a.appendChild(tambah);
+                    label.setAttribute('class', 'col-sm-2 col-sm-2 control-label')
+                    a.setAttribute('class', 'form-group');
+                    label.setPointerCapture('ukuran')
+                    tambah.setAttribute('type', 'text');
+                    tambah.setAttribute('name', 'inputan[]');
+                }
+
+                function kurangi_form() {
+                    var target = document.getElementById("formku");
+                    var akhir = target.lastChild;
+                    target.removeChild(akhir);
+                }
+
+
                 $(document).ready(function() {
 
                     $('.tagsinput').tagsinput({

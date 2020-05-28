@@ -58,7 +58,7 @@ if (
                     <?php include 'nav.php'; ?>
                     <div class="row wrapper border-bottom white-bg page-heading">
                         <div class="col-lg-10">
-                            <h2>Penambahan Data Kariawan</h2>
+                            <h2>Penambahan Data Produck</h2>
                             <ol class="breadcrumb">
                                 <li>
                                     <a href="../index.php">Home</a>
@@ -90,32 +90,31 @@ if (
                                     </div>
                                 </div>
                                 <div class="ibox-content">
-                                    <h3>Input Data Kariawan</h3>
-                                    <form class="form-horizontal m-t-md" action="kariawan-add-proses.php" method="POST" enctype="multipart/form-data">
+                                    <h3>Input Data Produck</h3>
+                                    <form class="form-horizontal m-t-md" action="produck-add-proses.php" method="POST" enctype="multipart/form-data">
+
                                         <div class="form-group">
-                                            <label class="col-sm-2 col-sm-2 control-label">Nama</label>
-                                            <div class="col-sm-10">
+                                            <label class="col-sm-2 col-sm-2 control-label">Kategori Produck</label>
+                                            <div class="col-sm-6">
+                                                <select class="form-control m-b" name="kategori">
+                                                    <?php
+                                                    $hasil = mysqli_query($koneksi, "SELECT * FROM kategori_produk ");
+                                                    while ($kolom = mysqli_fetch_assoc($hasil)) {
+                                                        echo "<option value='$kolom[id_kategori_produk]' >$kolom[nama_kategori]</option>";
+                                                    }
+                                                    ?>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 col-sm-2 control-label">Nama Produck</label>
+                                            <div class="col-sm-6">
                                                 <input type="text" class="form-control" name="nama">
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-2 control-label">Alamat</label>
-                                            <div class="col-sm-10">
-                                                <input type="text" class="form-control" name="alamat">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-2 control-label">No Telpon</label>
-                                            <div class="col-sm-10">
-                                                <input type="text" class="form-control" name="hp">
-                                            </div>
-                                        </div>
-                                        <span class="image-crop" hidden>
-                                            <img src="">
-                                        </span>
-                                        <div class="form-group">
-                                            <label class="col-sm-2 control-label">Foto</label>
-                                            <div class="col-sm-10">
+                                            <label class="col-sm-2 control-label">Gambar Produck</label>
+                                            <div class="col-sm-6">
                                                 <input type="file" class="form-control" name="file">
                                             </div>
                                         </div>

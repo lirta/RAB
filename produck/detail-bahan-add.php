@@ -41,6 +41,8 @@ if (
             <link href="../css/animate.css" rel="stylesheet">
             <link href="../css/style.css" rel="stylesheet">
 
+            <link rel="stylesheet" href="as.css">
+
 
         </head>
 
@@ -58,7 +60,7 @@ if (
                     <?php include 'nav.php'; ?>
                     <div class="row wrapper border-bottom white-bg page-heading">
                         <div class="col-lg-10">
-                            <h2>Penambahan Data Kariawan</h2>
+                            <h2>Penambahan Data Produck Kategori</h2>
                             <ol class="breadcrumb">
                                 <li>
                                     <a href="../index.php">Home</a>
@@ -79,7 +81,7 @@ if (
                         <div class="col-lg-12">
                             <div class="ibox float-e-margins">
                                 <div class="ibox-title">
-                                    <h5>Form </h5>
+                                    <h5>Tambah Produck Kategori </h5>
                                     <div class="ibox-tools">
                                         <a class="collapse-link">
                                             <i class="fa fa-chevron-up"></i>
@@ -90,33 +92,13 @@ if (
                                     </div>
                                 </div>
                                 <div class="ibox-content">
-                                    <h3>Input Data Kariawan</h3>
-                                    <form class="form-horizontal m-t-md" action="kariawan-add-proses.php" method="POST" enctype="multipart/form-data">
+                                    <form class="form-horizontal m-t-md" action="produck-kategori-add-proses.php" method="POST" enctype="multipart/form-data">
+
                                         <div class="form-group">
-                                            <label class="col-sm-2 col-sm-2 control-label">Nama</label>
-                                            <div class="col-sm-10">
-                                                <input type="text" class="form-control" name="nama">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-2 control-label">Alamat</label>
-                                            <div class="col-sm-10">
-                                                <input type="text" class="form-control" name="alamat">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-2 control-label">No Telpon</label>
-                                            <div class="col-sm-10">
-                                                <input type="text" class="form-control" name="hp">
-                                            </div>
-                                        </div>
-                                        <span class="image-crop" hidden>
-                                            <img src="">
-                                        </span>
-                                        <div class="form-group">
-                                            <label class="col-sm-2 control-label">Foto</label>
-                                            <div class="col-sm-10">
-                                                <input type="file" class="form-control" name="file">
+                                            <label class="col-sm-2 control-label">Kategori</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" name="sa[]" class="form-control">
+                                                <button class="btn btn-success add-more" type="button"><i class="glyphicon glyphicon-plus"></i> Add</button>
                                             </div>
                                         </div>
                                         <div class="hr-line-dashed"></div>
@@ -127,6 +109,15 @@ if (
                                             </div>
                                         </div>
                                     </form>
+
+                                    <div class="copy hide">
+                                        <div class="control-group input-group" style="margin-top:10px">
+                                            <input type="text" name="sa[]" class="form-control">
+                                            <div class="input-group-btn">
+                                                <button class="btn btn-danger remove" type="button"><i class="glyphicon glyphicon-remove"></i> Hapus</button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -182,6 +173,17 @@ if (
             <script src="../js/plugins/dualListbox/jquery.bootstrap-duallistbox.js"></script>
 
             <script>
+                $(document).ready(function() {
+                    $(".add-more").click(function() {
+                        var html = $(".copy").html();
+                        $(".after-add-more").after(html);
+                    });
+                    $("body").on("click", ".remove", function() {
+                        $(this).parents(".control-group").remove();
+                    });
+                });
+
+
                 $(document).ready(function() {
 
                     $('.tagsinput').tagsinput({
