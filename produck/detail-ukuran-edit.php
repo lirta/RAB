@@ -57,7 +57,7 @@ if (
                 <div id="page-wrapper" class="gray-bg">
                     <?php include 'nav.php'; ?>
                     <?php
-                    $hasil = mysqli_query($koneksi, "SELECT * FROM produk inner join kategori_produk on produk.id_kategori_produk=kategori_produk.id_kategori_produk  WHERE id_produk='$_GET[id]' ");
+                    $hasil = mysqli_query($koneksi, "SELECT * FROM produk inner join kategori_produk on produk.id_kategori_produk=kategori_produk.id_kategori_produk  WHERE id_produk='$_GET[idb]' ");
                     $kolom = mysqli_fetch_assoc($hasil);
                     ?>
                     <div class="row wrapper border-bottom white-bg page-heading">
@@ -94,24 +94,33 @@ if (
                                     </div>
                                 </div>
                                 <div class="ibox-content">
-
-                                    <form class="form-horizontal m-t-md" action="detail-ukuran-add-proses.php" method="POST" enctype="multipart/form-data">
+                                    <?php
+                                    $qu = mysqli_query($koneksi, "SELECT * FROM detail_ukuran WHERE id_detail_ukuran='$_GET[id]' ");
+                                    $edit = mysqli_fetch_assoc($qu);
+                                    ?>
+                                    <form class="form-horizontal m-t-md" action="detail-ukuran-edit-proses.php" method="POST" enctype="multipart/form-data">
                                         <div class="form-group" hidden>
-                                            <label class="col-sm-2 col-sm-2 control-label">id</label>
+                                            <label class="col-sm-2 col-sm-2 control-label">id ukuran</label>
                                             <div class="col-sm-6">
-                                                <input type="text" class="form-control" name="id" value="<?php echo "$kolom[id_produk]"; ?> ">
+                                                <input type="text" class="form-control" name="idu" value="<?php echo "$edit[id_detail_ukuran]"; ?> ">
+                                            </div>
+                                        </div>
+                                        <div class="form-group" hidden>
+                                            <label class="col-sm-2 col-sm-2 control-label">id produk</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" class="form-control" name="idp" value="<?php echo "$kolom[id_produk]"; ?> ">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-sm-2 col-sm-2 control-label">Ukuran</label>
                                             <div class="col-sm-6">
-                                                <input type="text" class="form-control" name="ukuran">
+                                                <input type="text" class="form-control" name="ukuran" value="<?php echo "$edit[ukuran]"; ?> ">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-sm-2 col-sm-2 control-label">Cm</label>
                                             <div class="col-sm-6">
-                                                <input type="text" class="form-control" name="cm">
+                                                <input type="text" class="form-control" name="cm" value="<?php echo "$edit[cm]"; ?> ">
                                             </div>
                                         </div>
                                         <div class="hr-line-dashed"></div>

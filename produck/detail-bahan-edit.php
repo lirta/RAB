@@ -57,12 +57,12 @@ if (
                 <div id="page-wrapper" class="gray-bg">
                     <?php include 'nav.php'; ?>
                     <?php
-                    $hasil = mysqli_query($koneksi, "SELECT * FROM produk inner join kategori_produk on produk.id_kategori_produk=kategori_produk.id_kategori_produk  WHERE id_produk='$_GET[id]' ");
+                    $hasil = mysqli_query($koneksi, "SELECT * FROM produk inner join kategori_produk on produk.id_kategori_produk=kategori_produk.id_kategori_produk  WHERE id_produk='$_GET[idb]' ");
                     $kolom = mysqli_fetch_assoc($hasil);
                     ?>
                     <div class="row wrapper border-bottom white-bg page-heading">
                         <div class="col-lg-10">
-                            <h2>Penambahan Data Ukuran Produck <?php echo "$kolom[nama_produk]"; ?><br><?php echo " Kategori $kolom[nama_kategori]"; ?> </h2>
+                            <h2>Edit Data Bahan Produck <?php echo "$kolom[nama_produk]"; ?><br><?php echo " Kategori $kolom[nama_kategori]"; ?> </h2>
                             <ol class="breadcrumb">
                                 <li>
                                     <a href="../index.php">Home</a>
@@ -83,7 +83,7 @@ if (
                         <div class="col-lg-12">
                             <div class="ibox float-e-margins">
                                 <div class="ibox-title">
-                                    <h3>Input Data Ukuran Produck</h3>
+                                    <h3>Input Data Bahan Produck</h3>
                                     <div class="ibox-tools">
                                         <a class="collapse-link">
                                             <i class="fa fa-chevron-up"></i>
@@ -94,24 +94,46 @@ if (
                                     </div>
                                 </div>
                                 <div class="ibox-content">
-
-                                    <form class="form-horizontal m-t-md" action="detail-ukuran-add-proses.php" method="POST" enctype="multipart/form-data">
+                                    <?php include 'nav.php'; ?>
+                                    <?php
+                                    $qbahan = mysqli_query($koneksi, "SELECT * FROM detail_bahan  WHERE id_detail_bahan='$_GET[id]' ");
+                                    $edit = mysqli_fetch_assoc($qbahan);
+                                    ?>
+                                    <form class="form-horizontal m-t-md" action="detail-bahan-edit-proses.php" method="POST" enctype="multipart/form-data">
                                         <div class="form-group" hidden>
-                                            <label class="col-sm-2 col-sm-2 control-label">id</label>
+                                            <label class="col-sm-2 col-sm-2 control-label">id bahan</label>
                                             <div class="col-sm-6">
-                                                <input type="text" class="form-control" name="id" value="<?php echo "$kolom[id_produk]"; ?> ">
+                                                <input type="text" class="form-control" name="idb" value="<?php echo "$edit[id_detail_bahan]"; ?> ">
+                                            </div>
+                                        </div>
+                                        <div class="form-group" hidden>
+                                            <label class="col-sm-2 col-sm-2 control-label">id produk</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" class="form-control" name="idp" value="<?php echo "$edit[id_produk]"; ?> ">
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-2 col-sm-2 control-label">Ukuran</label>
+                                            <label class="col-sm-2 col-sm-2 control-label">Bahan</label>
                                             <div class="col-sm-6">
-                                                <input type="text" class="form-control" name="ukuran">
+                                                <select class="form-control m-b" name="bahan">
+                                                    <?php
+                                                    $qv = mysqli_query($koneksi, "SELECT * FROM bahan inner join bahan_kategori on bahan.id_bahan_kategori=bahan_kategori.id_bahan_kategori WHERE id_bahan='$edit[id_bahan]'");
+                                                    $hv = mysqli_fetch_assoc($qv);
+                                                    echo "<option value='$hv[id_bahan]' >$hv[nama_bahan] || $hv[bahan_kategori]</option>";
+
+
+                                                    $qbhn = mysqli_query($koneksi, "SELECT * FROM bahan inner join bahan_kategori on bahan.id_bahan_kategori=bahan_kategori.id_bahan_kategori");
+                                                    while ($bhn = mysqli_fetch_assoc($qbhn)) {
+                                                        echo "<option value='$bhn[id_bahan]' >$bhn[nama_bahan] || $bhn[bahan_kategori]</option>";
+                                                    }
+                                                    ?>
+                                                </select>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-2 col-sm-2 control-label">Cm</label>
+                                            <label class="col-sm-2 col-sm-2 control-label">Jumlah</label>
                                             <div class="col-sm-6">
-                                                <input type="text" class="form-control" name="cm">
+                                                <input type="text" class="form-control" name="jml" value="<?php echo "$edit[jml]"; ?>">
                                             </div>
                                         </div>
                                         <div class="hr-line-dashed"></div>

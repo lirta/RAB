@@ -41,8 +41,6 @@ if (
             <link href="../css/animate.css" rel="stylesheet">
             <link href="../css/style.css" rel="stylesheet">
 
-            <link rel="stylesheet" href="as.css">
-
 
         </head>
 
@@ -58,9 +56,13 @@ if (
 
                 <div id="page-wrapper" class="gray-bg">
                     <?php include 'nav.php'; ?>
+                    <?php
+                    $hasil = mysqli_query($koneksi, "SELECT * FROM produk inner join kategori_produk on produk.id_kategori_produk=kategori_produk.id_kategori_produk  WHERE id_produk='$_GET[id]' ");
+                    $kolom = mysqli_fetch_assoc($hasil);
+                    ?>
                     <div class="row wrapper border-bottom white-bg page-heading">
                         <div class="col-lg-10">
-                            <h2>Penambahan Data Produck Kategori</h2>
+                            <h2>Penambahan Data Bahan Produck <?php echo "$kolom[nama_produk]"; ?><br><?php echo " Kategori $kolom[nama_kategori]"; ?> </h2>
                             <ol class="breadcrumb">
                                 <li>
                                     <a href="../index.php">Home</a>
@@ -81,7 +83,7 @@ if (
                         <div class="col-lg-12">
                             <div class="ibox float-e-margins">
                                 <div class="ibox-title">
-                                    <h5>Tambah Produck Kategori </h5>
+                                    <h3>Input Data Bahan Produck</h3>
                                     <div class="ibox-tools">
                                         <a class="collapse-link">
                                             <i class="fa fa-chevron-up"></i>
@@ -92,13 +94,31 @@ if (
                                     </div>
                                 </div>
                                 <div class="ibox-content">
-                                    <form class="form-horizontal m-t-md" action="produck-kategori-add-proses.php" method="POST" enctype="multipart/form-data">
 
-                                        <div class="form-group">
-                                            <label class="col-sm-2 control-label">Kategori</label>
+                                    <form class="form-horizontal m-t-md" action="detail-bahan-add-proses.php" method="POST" enctype="multipart/form-data">
+                                        <div class="form-group" hidden>
+                                            <label class="col-sm-2 col-sm-2 control-label">id</label>
                                             <div class="col-sm-6">
-                                                <input type="text" name="sa[]" class="form-control">
-                                                <button class="btn btn-success add-more" type="button"><i class="glyphicon glyphicon-plus"></i> Add</button>
+                                                <input type="text" class="form-control" name="id" value="<?php echo "$kolom[id_produk]"; ?> ">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 col-sm-2 control-label">Bahan</label>
+                                            <div class="col-sm-6">
+                                                <select class="form-control m-b" name="bahan">
+                                                    <?php
+                                                    $qbhn = mysqli_query($koneksi, "SELECT * FROM bahan inner join bahan_kategori on bahan.id_bahan_kategori=bahan_kategori.id_bahan_kategori");
+                                                    while ($bhn = mysqli_fetch_assoc($qbhn)) {
+                                                        echo "<option value='$bhn[id_bahan]' >$bhn[nama_bahan] || $bhn[bahan_kategori]</option>";
+                                                    }
+                                                    ?>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 col-sm-2 control-label">Jumlah</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" class="form-control" name="jml">
                                             </div>
                                         </div>
                                         <div class="hr-line-dashed"></div>
@@ -109,15 +129,6 @@ if (
                                             </div>
                                         </div>
                                     </form>
-
-                                    <div class="copy hide">
-                                        <div class="control-group input-group" style="margin-top:10px">
-                                            <input type="text" name="sa[]" class="form-control">
-                                            <div class="input-group-btn">
-                                                <button class="btn btn-danger remove" type="button"><i class="glyphicon glyphicon-remove"></i> Hapus</button>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -173,17 +184,6 @@ if (
             <script src="../js/plugins/dualListbox/jquery.bootstrap-duallistbox.js"></script>
 
             <script>
-                $(document).ready(function() {
-                    $(".add-more").click(function() {
-                        var html = $(".copy").html();
-                        $(".after-add-more").after(html);
-                    });
-                    $("body").on("click", ".remove", function() {
-                        $(this).parents(".control-group").remove();
-                    });
-                });
-
-
                 $(document).ready(function() {
 
                     $('.tagsinput').tagsinput({

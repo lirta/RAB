@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 27, 2020 at 09:04 AM
+-- Generation Time: May 28, 2020 at 01:01 PM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.3
 
@@ -68,6 +68,28 @@ INSERT INTO `bahan_kategori` (`id_bahan_kategori`, `bahan_kategori`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `detail_bahan`
+--
+
+CREATE TABLE `detail_bahan` (
+  `id_detail_bahan` int(11) NOT NULL,
+  `id_produk` int(11) NOT NULL,
+  `id_bahan` int(11) NOT NULL,
+  `jml` int(11) NOT NULL,
+  `harga` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `detail_bahan`
+--
+
+INSERT INTO `detail_bahan` (`id_detail_bahan`, `id_produk`, `id_bahan`, `jml`, `harga`) VALUES
+(4, 1, 1, 4, 60000000),
+(5, 1, 2, 2, 3000000);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `detail_produk`
 --
 
@@ -77,6 +99,28 @@ CREATE TABLE `detail_produk` (
   `id_bahan` int(11) NOT NULL,
   `ukuran` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `detail_ukuran`
+--
+
+CREATE TABLE `detail_ukuran` (
+  `id_detail_ukuran` int(11) NOT NULL,
+  `id_produk` int(11) NOT NULL,
+  `ukuran` varchar(100) NOT NULL,
+  `cm` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `detail_ukuran`
+--
+
+INSERT INTO `detail_ukuran` (`id_detail_ukuran`, `id_produk`, `ukuran`, `cm`) VALUES
+(8, 1, 'panjang ', 50),
+(9, 1, 'lebar ', 50),
+(10, 1, 'tinggi', 50);
 
 -- --------------------------------------------------------
 
@@ -116,7 +160,8 @@ CREATE TABLE `kategori_produk` (
 --
 
 INSERT INTO `kategori_produk` (`id_kategori_produk`, `nama_kategori`) VALUES
-(1, 'kantor saya');
+(1, 'kantor'),
+(2, 'rumah');
 
 -- --------------------------------------------------------
 
@@ -162,11 +207,19 @@ INSERT INTO `login` (`username`, `password`, `id_kariawan`, `akses`, `status`) V
 --
 
 CREATE TABLE `produk` (
-  `id_produk` varchar(15) NOT NULL,
+  `id_produk` int(15) NOT NULL,
   `id_kategori_produk` varchar(15) NOT NULL,
   `nama_produk` varchar(25) NOT NULL,
-  `gambar` int(125) NOT NULL
+  `gambar` varchar(225) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `produk`
+--
+
+INSERT INTO `produk` (`id_produk`, `id_kategori_produk`, `nama_produk`, `gambar`) VALUES
+(1, '2', 'meja rumah', 'produck799434403D-Action-Games-HD-Wallpaper.jpg'),
+(2, '2', 'gentho', 'produck71200595devil-may-cry-background.jpg');
 
 --
 -- Indexes for dumped tables
@@ -185,10 +238,22 @@ ALTER TABLE `bahan_kategori`
   ADD PRIMARY KEY (`id_bahan_kategori`);
 
 --
+-- Indexes for table `detail_bahan`
+--
+ALTER TABLE `detail_bahan`
+  ADD PRIMARY KEY (`id_detail_bahan`);
+
+--
 -- Indexes for table `detail_produk`
 --
 ALTER TABLE `detail_produk`
   ADD PRIMARY KEY (`id_detail_produk`);
+
+--
+-- Indexes for table `detail_ukuran`
+--
+ALTER TABLE `detail_ukuran`
+  ADD PRIMARY KEY (`id_detail_ukuran`);
 
 --
 -- Indexes for table `kariawan`
@@ -231,10 +296,22 @@ ALTER TABLE `bahan_kategori`
   MODIFY `id_bahan_kategori` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
+-- AUTO_INCREMENT for table `detail_bahan`
+--
+ALTER TABLE `detail_bahan`
+  MODIFY `id_detail_bahan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT for table `detail_produk`
 --
 ALTER TABLE `detail_produk`
   MODIFY `id_detail_produk` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `detail_ukuran`
+--
+ALTER TABLE `detail_ukuran`
+  MODIFY `id_detail_ukuran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `kariawan`
@@ -246,7 +323,13 @@ ALTER TABLE `kariawan`
 -- AUTO_INCREMENT for table `kategori_produk`
 --
 ALTER TABLE `kategori_produk`
-  MODIFY `id_kategori_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_kategori_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `produk`
+--
+ALTER TABLE `produk`
+  MODIFY `id_produk` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

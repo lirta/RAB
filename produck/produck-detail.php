@@ -94,7 +94,9 @@ if (
                                     <div class="ibox-title">
                                         <h3>Detail Ukuran</h3>
                                         <div class="hr-line-dashed"></div>
-                                        <a href='detail-ukuran-add.php' class='btn btn-primary'>TAMBAH DATA</a>
+                                        <?php
+                                        echo "<a href='detail-ukuran-add.php?id=$kolom[id_produk]'  class='btn btn-primary btn-sm'>TAMBAH DATA</a> ";
+                                        ?>
                                         <div class="ibox-tools">
                                             <a class="collapse-link">
                                                 <i class="fa fa-chevron-up"></i>
@@ -124,8 +126,8 @@ if (
                                                             <td><?php echo "$ukuran[cm]"; ?></td>
                                                             <td>
                                                                 <?php
-                                                                echo "<a href='detail-ukuran-edit.php?id=$ukuran[id_detail_ukuran]'  class='btn btn-primary btn-sm'>EDIT</a>
-                                                                    <a href='detail-ukuran-hapus.php?id=$ukuran[id_detail_ukuran]'  class='btn btn-danger btn-sm'>HAPUS</a> ";
+                                                                echo "<a href='detail-ukuran-edit.php?id=$ukuran[id_detail_ukuran]&idb=$kolom[id_produk]'  class='btn btn-primary btn-sm'>EDIT</a>
+                                                                    <a href='detail-ukuran-hapus.php?id=$ukuran[id_detail_ukuran]&idb=$kolom[id_produk]'  class='btn btn-danger btn-sm'>HAPUS</a> ";
 
                                                                 ?></td>
                                                             </td>
@@ -149,7 +151,9 @@ if (
                                     <div class="ibox-title">
                                         <h3>Detail Bahan</h3>
                                         <div class="hr-line-dashed"></div>
-                                        <a href='detail-bahan-add.php' class='btn btn-primary'>TAMBAH DATA</a>
+                                        <?php
+                                        echo "<a href='detail-bahan-add.php?id=$kolom[id_produk]'  class='btn btn-primary btn-sm'>TAMBAH DATA</a> ";
+                                        ?>
                                         <div class="ibox-tools">
                                             <a class="collapse-link">
                                                 <i class="fa fa-chevron-up"></i>
@@ -173,6 +177,7 @@ if (
                                                 </thead>
                                                 <tbody>
                                                     <?php
+                                                    $tharga = 0;
                                                     $qdbahan = mysqli_query($koneksi, "SELECT * FROM detail_bahan   WHERE id_produk='$_GET[id]' ");
                                                     while ($dbahan = mysqli_fetch_assoc($qdbahan)) {
                                                         $qbahan = mysqli_query($koneksi, "SELECT * FROM bahan inner join bahan_kategori on bahan.id_bahan_kategori=bahan_kategori.id_bahan_kategori   WHERE id_bahan='$dbahan[id_bahan]' ");
@@ -185,15 +190,23 @@ if (
                                                                 <td><?php echo "$dbahan[harga]"; ?></td>
                                                                 <td>
                                                                     <?php
-                                                                    echo "<a href='detail-bahan-edit.php?id=$dbahan[id_detail_bahan]'  class='btn btn-primary btn-sm'>EDIT</a>
-                                                                    <a href='detail-bahan-hapus.php?id=$dbahan[id_detail_bahan]'  class='btn btn-danger btn-sm'>HAPUS</a> ";
+                                                                    echo "<a href='detail-bahan-edit.php?id=$dbahan[id_detail_bahan]&idb=$kolom[id_produk]'  class='btn btn-primary btn-sm'>EDIT</a>
+                                                                    <a href='detail-bahan-hapus.php?id=$dbahan[id_detail_bahan]&idb=$kolom[id_produk]'  class='btn btn-danger btn-sm'>HAPUS</a> ";
 
-                                                                    ?></td>
+                                                                    ?>
                                                                 </td>
                                                             </tr>
-                                                    <?php }
+                                                    <?php
+                                                            $tharga = $tharga + $dbahan['harga'];
+                                                        }
                                                     } ?>
                                                 </tbody>
+                                                <tfoot>
+                                                    <tr>
+                                                        <th colspan="3">Total Harga Bahan</th>
+                                                        <th colspan="2"><?php echo "$tharga"; ?></th>
+                                                    </tr>
+                                                </tfoot>
                                             </table>
                                         </div>
 
