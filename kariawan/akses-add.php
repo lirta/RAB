@@ -105,7 +105,7 @@ if (
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-2 control-label">Alamat</label>
+                                            <label class="col-sm-2 control-label">Akses</label>
                                             <div class="col-sm-6">
                                                 <select class="form-control m-b" name="akses">
                                                     <option>ADMIN</option>
