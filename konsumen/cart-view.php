@@ -139,12 +139,19 @@ if (
                                                                     </div>
                                                                 </td>
 
-                                                                <td>
-                                                                    $180,00
+
+                                                                <div class="form-group" hidden>
+                                                                    <input type="text" class="form-control" name="harga[]" id="h" value="<?php echo "$kolom[harga]" ?>">
+                                                                </div>
+                                                                <td id="t" readonly>
+                                                                    <?php echo "Harga/items Rp. $kolom[harga]" ?>
                                                                 </td>
                                                                 <td width="65">
-                                                                    <input type="text" class="form-control" placeholder="1" name="pro[]" value="<?php echo "$kolom[id_produk]" ?>">
-                                                                    <input type="text" class="form-control" placeholder="1" name="qrt[]">
+                                                                    <div class="form-group" hidden>
+                                                                        <input type="text" class="form-control" name="id" value="<?php echo "$kolom[id_konsumen]" ?>">
+                                                                        <input type="text" class="form-control" name="pro[]" value="<?php echo "$kolom[id_produk]" ?>"></div>
+                                                                    <input type="text" class="form-control" name="qrt[]" id="j">
+
                                                                 </td>
                                                             </tr>
                                                         </tbody>
@@ -154,9 +161,9 @@ if (
                                             </div>
 
                                         <?php } ?>
-                                        <input type="text" class="form-control" placeholder="1" name="kon" value="<?php echo "$_SESSION[id]" ?>">
-
-                                        <input type="text" class="form-control" placeholder="1" name="jlh" value="<?php echo "$ketemu" ?>">
+                                        <div class="form-group" hidden>
+                                            <input type="text" class="form-control" name="jlh" value="<?php echo "$ketemu" ?>">
+                                        </div>
 
 
                                         <div class="ibox-content">
@@ -191,6 +198,17 @@ if (
             <!-- Custom and plugin javascript -->
             <script src="../js/inspinia.js"></script>
             <script src="../js/plugins/pace/pace.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+            <script type="text/javascript">
+                $("#h,#j").keyup(function() {
+                    var val1 = $('#h').val();
+                    var val2 = $('#j').val();
+                    var kali = Number(val1) * Number(val2);
+                    if (val1 != "" && val2 != "") {
+                        $('#t').val(kali);
+                    }
+                })
+            </script>
 
         </body>
 

@@ -83,7 +83,7 @@ if (
                                             </div>
                                             <div class="product-desc">
                                                 <span class="product-price">
-                                                    <?php echo "Rp .100.000.000" ?>
+                                                    <?php echo "$kolom[harga]" ?>
                                                 </span>
                                                 <small class="text-muted"><strong>Kategori</strong> / <?php echo "$kolom[nama_kategori]"; ?></small>
                                                 <a href="#" class="product-name"> <?php echo "$kolom[nama_produk]"; ?></a>
