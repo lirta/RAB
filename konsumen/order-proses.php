@@ -1,10 +1,11 @@
 <?php
 include "../assets/coneksi/config.php";
 
-$date = date("d/m/Y");
+$date = date(' d/m/Y');
 $acak = rand(0000, 9999);
 $id_order = $acak . $konsumen;
 $s = "ORDER";
+$k = "PRODUCK";
 
 $konsumen = $_POST['id'];
 $jp    = $_POST['jlh'];
@@ -13,7 +14,17 @@ $jumlah = $_POST['qrt'];
 $cart = $_POST['id'];
 $h = $_POST['harga'];
 
-mysqli_query($koneksi, "INSERT INTO orderan (id_orderan,id_konsumen,tanggal,status_order)values('$id_order','$konsumen','$date','$s')");
+mysqli_query($koneksi, "INSERT INTO orderan (id_orderan,
+                                            id_konsumen,
+                                            tanggal,
+                                            kategori,
+                                            status_order)
+                                            values
+                                            ('$id_order',
+                                            '$konsumen',
+                                            '$date',
+                                            '$k',
+                                            '$s')");
 
 for ($i = 0; $i < $jp; $i++) {
     $p = $produk[$i];

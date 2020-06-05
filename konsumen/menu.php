@@ -26,6 +26,9 @@
         <a href="katalog.php"><i class="fa fa-desktop"></i> <span class="nav-label">Katalog Produck</span></a>
     </li>
     <li>
+        <a href="order-kastem.php"><i class="fa fa-shopping-cart"></i> <span class="nav-label">Order Kastem</span></a>
+    </li>
+    <li>
         <a href="cart-view.php"><i class="fa fa-shopping-cart"></i> <span class="nav-label">Keranjang</span></a>
     </li>
     <li>

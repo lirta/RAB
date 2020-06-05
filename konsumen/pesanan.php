@@ -18,7 +18,7 @@ if (
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-            <title>INSPINIA | E-commerce</title>
+            <title>CV. KAYANA CITRA GEMILANG</title>
 
             <link href="../css/bootstrap.min.css" rel="stylesheet">
             <link href="../font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -82,8 +82,10 @@ if (
 
                                                     <th data-toggle="true">Product Name</th>
                                                     <th data-hide="all">produck</th>
-                                                    <th data-hide="phone,tablet">Jumlah Total</th>
+                                                    <th data-hide="phone">Kategori</th>
                                                     <th data-hide="phone">Status</th>
+                                                    <th data-hide="phone">Jumlah items</th>
+                                                    <th data-hide="phone">Total harga</th>
 
                                                 </tr>
                                             </thead>
@@ -97,25 +99,31 @@ if (
                                                         </td>
                                                         <td>
                                                             <?php
-
-                                                            $t = 0;
-                                                            $qkp = mysqli_query($koneksi, "SELECT * FROM detail_orderan inner join produk on detail_orderan.id_produk=produk.id_produk WHERE id_orderan='$kolom[id_orderan]' ");
-                                                            while ($kp = mysqli_fetch_assoc($qkp)) {
-                                                                $t = $t + $kp['jumlah'];
-                                                                echo "
-                                                               <ul>
-                                                               <li>Nama Produck = $kp[nama_produk]  <br> Jumlah = $kp[jumlah]</li>
-                                                               </ul>
-                                                               ";
+                                                            if ($kolom['kategori'] == "PRODUCK") {
+                                                                $t = 0;
+                                                                $qkp = mysqli_query($koneksi, "SELECT * FROM detail_orderan  WHERE id_orderan='$kolom[id_orderan]' ");
+                                                                while ($kp = mysqli_fetch_assoc($qkp)) {
+                                                                    $h = $kp['harga'];
+                                                                    $qproduk = mysqli_query($koneksi, "SELECT * FROM produk WHERE id_produk='$kp[id_produk]'");
+                                                                    $pro = mysqli_fetch_assoc($qproduk);
+                                                                    $t = $t + $kp['jumlah'];
+                                                                    echo "
+                                                                            <ul>
+                                                                            <li>Nama Produck = $pro[nama_produk]  <br> Jumlah = $kp[jumlah] <br> Harga = $pro[harga], $kp[harga]</li>
+                                                                            </ul>
+                                                                            ";
+                                                                }
+                                                            } else {
+                                                                echo "data kosong";
                                                             }
                                                             ?>
 
 
                                                         </td>
-                                                        <td>
-                                                            <?php echo "$t"; ?>
-                                                        </td>
+                                                        <td><?php echo "$kolom[kategori]"; ?></td>
                                                         <td><?php echo "$kolom[status_order]"; ?></td>
+                                                        <td><?php echo "$t"; ?></td>
+                                                        <td><?php echo "$h"; ?></td>
                                                 </tr>
                                             <?php } ?>
 
