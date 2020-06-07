@@ -101,32 +101,12 @@ if (
                                                                     <h5><strong>Kategori</strong> / <?php echo "$kp[nama_kategori]"; ?></h5>
                                                                     <p class="small">
                                                                         <div class="col-md-12">
-                                                                            <div class="col-md-6">
-                                                                                <dl class="small m-b-none">
-                                                                                    <dt>Ukuran :</dt>
-                                                                                    <dd>
-                                                                                        <?php
-                                                                                        $quk = mysqli_query($koneksi, "SELECT * FROM detail_ukuran WHERE id_produk='$kolom[id_produk]' ");
-                                                                                        while ($uk = mysqli_fetch_assoc($quk)) {
-                                                                                            echo "$uk[ukuran] : $uk[cm] <br>";
-                                                                                        }
-                                                                                        ?></dd>
-                                                                                </dl>
-                                                                            </div>
-                                                                            <div class="col-md-6">
-                                                                                <dl class="small m-b-none">
-                                                                                    <dt>Bahan :</dt>
-                                                                                    <dd>
-                                                                                        <?php
-                                                                                        $qbh = mysqli_query($koneksi, "SELECT * FROM detail_bahan inner join bahan on detail_bahan.id_bahan=bahan.id_bahan WHERE id_produk='$kolom[id_produk]' ");
-                                                                                        while ($bh = mysqli_fetch_assoc($qbh)) {
-                                                                                            echo "$bh[nama_bahan] <br>";
-                                                                                        }
-                                                                                        ?>
-                                                                                    </dd>
-                                                                                </dl>
-                                                                            </div>
-
+                                                                            <dl class="small m-b-none">
+                                                                                <dt>Deskripsi :</dt>
+                                                                                <dd>
+                                                                                    <?php echo "$kolom[keterangan]"; ?>
+                                                                                </dd>
+                                                                            </dl>
                                                                         </div>
                                                                     </p>
 
@@ -141,7 +121,7 @@ if (
 
 
                                                                 <div class="form-group" hidden>
-                                                                    <input type="text" class="form-control" name="harga[]" id="h" value="<?php echo "$kolom[harga]" ?>">
+                                                                    <input type="text" class="form-control" name="harga[]" id="h" value="<?php echo "Rp.  " . number_format($kolom['harga'], 0, ".", ","); ?>">
                                                                 </div>
                                                                 <td id="t" readonly>
                                                                     <?php echo "Harga/items Rp. $kolom[harga]" ?>
@@ -150,7 +130,7 @@ if (
                                                                     <div class="form-group" hidden>
                                                                         <input type="text" class="form-control" name="id" value="<?php echo "$kolom[id_konsumen]" ?>">
                                                                         <input type="text" class="form-control" name="pro[]" value="<?php echo "$kolom[id_produk]" ?>"></div>
-                                                                    <input type="text" class="form-control" name="qrt[]" id="j">
+                                                                    <input type="text" class="form-control" name="qrt[]" value="1">
 
                                                                 </td>
                                                             </tr>

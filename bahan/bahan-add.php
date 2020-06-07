@@ -117,6 +117,16 @@ if (
                                             </div>
                                         </div>
                                         <div class="form-group">
+                                            <label class="col-sm-2 col-sm-2 control-label">Kualitas Bahan</label>
+                                            <div class="col-sm-6">
+                                                <select class="form-control m-b" name="kualitas">
+                                                    <option>SANGAT BAGUS</option>
+                                                    <option>BAGUS</option>
+                                                    <option>BIASA</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
                                             <label class="col-sm-2 control-label">Harga</label>
                                             <div class="col-sm-6">
                                                 <input type="text" class="form-control" name="harga">

@@ -83,22 +83,13 @@ if (
                                             </div>
                                             <div class="product-desc">
                                                 <span class="product-price">
-                                                    <?php echo "$kolom[harga]" ?>
+                                                    <?php echo "Rp.  " . number_format($kolom['harga'], 0, ".", ","); ?>
                                                 </span>
                                                 <small class="text-muted"><strong>Kategori</strong> / <?php echo "$kolom[nama_kategori]"; ?></small>
                                                 <a href="#" class="product-name"> <?php echo "$kolom[nama_produk]"; ?></a>
                                                 <hr>
                                                 <div class="small m-t-xs">
-                                                    Ukuran :
-                                                    <ul>
-                                                        <?php
-                                                        $qbhn = mysqli_query($koneksi, "SELECT * FROM detail_ukuran where id_produk='$kolom[id_produk]'   ");
-                                                        while ($bhn = mysqli_fetch_assoc($qbhn)) {
-                                                        ?>
-                                                            <li><?php echo "$bhn[ukuran] : $bhn[cm]" ?></li>
-
-                                                        <?php } ?>
-                                                    </ul>
+                                                    <p><?php echo "Deskripsi : <br> $kolom[keterangan]"; ?></p>
                                                 </div>
                                                 <hr>
                                                 <div class="m-t text-righ">

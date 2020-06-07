@@ -96,7 +96,7 @@ if (
                                     $edit = mysqli_fetch_assoc($qedit);
                                     ?>
                                     <form class="form-horizontal m-t-md" action="produck-edit-proses.php" method="POST" enctype="multipart/form-data">
-                                        <div class="form-group">
+                                        <div class="form-group" hidden>
                                             <label class="col-sm-2 col-sm-2 control-label">id Produck</label>
                                             <div class="col-sm-6">
                                                 <input type="text" class="form-control" name="id" value="<?php echo "$edit[id_produk]"; ?>">
@@ -120,6 +120,18 @@ if (
                                             <label class="col-sm-2 col-sm-2 control-label">Nama Produck</label>
                                             <div class="col-sm-6">
                                                 <input type="text" class="form-control" name="nama" value="<?php echo "$edit[nama_produk]"; ?>">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 col-sm-2 control-label">Harga</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" class="form-control" name="harga" value="<?php echo "$edit[harga]"; ?>">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 col-sm-2 control-label">Deskripsi</label>
+                                            <div class="col-sm-6" class="summernote">
+                                                <textarea class="form-control" name="deskripsi" rows="4" cols="64"><?php echo "$edit[keterangan]"; ?></textarea>
                                             </div>
                                         </div>
                                         <div class="form-group">

@@ -91,29 +91,34 @@ if (
                                 </div>
                                 <div class="ibox-content">
                                     <h3>Input Data Produck</h3>
-                                    <form class="form-horizontal m-t-md" action="produck-add-proses.php" method="POST" enctype="multipart/form-data">
+                                    <form class="form-horizontal m-t-md" action="order-kastem-proses.php" method="POST" enctype="multipart/form-data">
 
                                         <div class="form-group">
                                             <label class="col-sm-2 col-sm-2 control-label">Kategori Produck</label>
                                             <div class="col-sm-6">
-                                                <select class="form-control m-b" name="kategori">
-                                                    <?php
-                                                    $hasil = mysqli_query($koneksi, "SELECT * FROM kategori_produk ");
-                                                    while ($kolom = mysqli_fetch_assoc($hasil)) {
-                                                        echo "<option value='$kolom[id_kategori_produk]' >$kolom[nama_kategori]</option>";
-                                                    }
-                                                    ?>
-                                                </select>
+                                                <input type="text" class="form-control" name="kategori" placeholder="ex: kantor">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-sm-2 col-sm-2 control-label">Nama Produck</label>
                                             <div class="col-sm-6">
-                                                <input type="text" class="form-control" name="nama">
+                                                <input type="text" class="form-control" name="nama" placeholder="ex: Meja">
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-2 control-label">Gambar Produck</label>
+                                            <label class="col-sm-2 col-sm-2 control-label">Deskripsi</label>
+                                            <div class="col-sm-6" class="summernote">
+                                                <textarea class="form-control" name="deskripsi" rows="4" cols="64" placeholder="ex: Buat semirip mungkin dengan referensi gambar"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 col-sm-2 control-label">Jumlah</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" class="form-control" name="jumlah" placeholder="ex: 10">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">Referensi gambar</label>
                                             <div class="col-sm-6">
                                                 <input type="file" class="form-control" name="file">
                                             </div>

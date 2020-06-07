@@ -110,13 +110,13 @@ if (
                                         <div class="form-group">
                                             <label class="col-sm-2 col-sm-2 control-label">No Telpon</label>
                                             <div class="col-sm-6">
-                                                <input type="text" class="form-control" name="nama" value="<?php echo "$edit[no_hp_konsumen]"; ?>">
+                                                <input type="text" class="form-control" name="hp" value="<?php echo "$edit[no_hp_konsumen]"; ?>">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-sm-2 control-label">Email</label>
                                             <div class="col-sm-6">
-                                                <input type="text" class="form-control" name="alamat" value="<?php echo "$edit[email_konsumen]"; ?>">
+                                                <input type="text" class="form-control" name="email" value="<?php echo "$edit[email_konsumen]"; ?>">
                                             </div>
                                         </div>
                                         <div class="form-group">

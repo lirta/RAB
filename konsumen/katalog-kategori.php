@@ -93,22 +93,13 @@ if (
                                                 </div>
                                                 <div class="product-desc">
                                                     <span class="product-price">
-                                                        <?php echo "Rp .100.000.000" ?>
+                                                        <?php echo "Rp.  " . number_format($kolom['harga'], 0, ".", ","); ?>
                                                     </span>
-                                                    <small class="text-muted">Category <br> <?php echo "$hkk[nama_kategori]"; ?></small>
+                                                    <small class="text-muted"><strong>Kategori</strong> / <?php echo "$hkk[nama_kategori]"; ?></small>
                                                     <a href="#" class="product-name"> <?php echo "$kolom[nama_produk]"; ?></a>
                                                     <hr>
                                                     <div class="small m-t-xs">
-                                                        Ukuran :
-                                                        <ul>
-                                                            <?php
-                                                            $qbhn = mysqli_query($koneksi, "SELECT * FROM detail_ukuran where id_produk='$kolom[id_produk]'   ");
-                                                            while ($bhn = mysqli_fetch_assoc($qbhn)) {
-                                                            ?>
-                                                                <li><?php echo "$bhn[ukuran] : $bhn[cm]" ?></li>
-
-                                                            <?php } ?>
-                                                        </ul>
+                                                        <p><?php echo "Deskripsi : <br> $kolom[keterangan]"; ?></p>
                                                     </div>
                                                     <hr>
                                                     <div class="m-t text-righ">
@@ -119,7 +110,7 @@ if (
                                         </div>
                                     </div>
                                 <?php } else { ?>
-                                    <h2>TIDAK AADA PRODUCKS</h2>
+                                    <h2>TIDAK TIDAK PRODUCKS</h2>
                             <?php  }
                             } ?>
                         </div>

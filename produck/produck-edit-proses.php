@@ -11,6 +11,8 @@ if (!empty($folderawal)) {
     move_uploaded_file($folderawal, $foldertujuan . $nama);
     $querii = "UPDATE produk SET id_kategori_produk='$_POST[kategori]',
                                         nama_produk='$_POST[nama]',
+                                        harga='$_POST[harga]',
+                                        keterangan='$_POST[deskripsi]',
                                         gambar='$nama' 
                                         WHERE
                                         id_produk='$_POST[id]'";
@@ -19,7 +21,9 @@ if (!empty($folderawal)) {
     header('location:produck-view.php');
 } else {
     $querii = "UPDATE produk SET id_kategori_produk='$_POST[kategori]',
-                                    nama_produk='$_POST[nama]'
+                                    nama_produk='$_POST[nama]',
+                                        harga='$_POST[harga]',
+                                        keterangan='$_POST[deskripsi]'
                                      WHERE
                                     id_produk='$_POST[id]'";
     mysqli_query($koneksi, $querii);

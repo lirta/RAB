@@ -82,8 +82,9 @@ if (
                                                         <th>Bahan</th>
                                                         <th>Kategori Bahan</th>
                                                         <th>Merek</th>
+                                                        <th>Kualitas</th>
                                                         <th>Harga Bahan</th>
-                                                        <th width="15%">Aksi</th>
+                                                        <th width="10%">Aksi</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -95,11 +96,12 @@ if (
                                                             <td><?php echo "$kolom[nama_bahan]"; ?></td>
                                                             <td><?php echo "$kolom[bahan_kategori]"; ?></td>
                                                             <td><?php echo "$kolom[merek]"; ?></td>
+                                                            <td><?php echo "$kolom[kualitas]"; ?></td>
                                                             <td><?php echo "$kolom[harga]"; ?></td>
                                                             <td>
                                                                 <?php
-                                                                echo "<a href='bahan-edit.php?id=$kolom[id_bahan]'  class='btn btn-primary btn-sm'>EDIT</a>
-                                                                    <a href='bahan-hapus.php?id=$kolom[id_bahan]'  class='btn btn-danger btn-sm'>HAPUS</a> ";
+                                                                echo "<a href='bahan-edit.php?id=$kolom[id_bahan]'  class='btn btn-primary btn-sm'><i class='fa fa-pencil'></i></a>
+                                                                    <a href='bahan-hapus.php?id=$kolom[id_bahan]'  class='btn btn-danger btn-sm'><i class='fa fa-trash'></i></a> ";
 
                                                                 ?></td>
                                                             </td>

@@ -128,18 +128,30 @@ if (
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-2 control-label">Harga</label>
+                                            <label class="col-sm-2 col-sm-2 control-label">Kualitas Bahan</label>
                                             <div class="col-sm-6">
-                                                <input type="text" class="form-control" name="harga" value="<?php echo "$edit[harga]"; ?>">
-                                            </div>
-                                        </div>
-                                        <div class="hr-line-dashed"></div>
+                                                <select class="form-control m-b" name="kualitas">
+                                                    <option "><?php echo "$edit[kualitas]"; ?></option>
 
-                                        <div class="form-group">
-                                            <div class="col-sm-4 col-sm-offset-2">
-                                                <button class="btn btn-primary" type="submit">Save </button>
+                                                    <option>SANGAT BAGUS</option>
+                                                    <option>BAGUS</option>
+                                                    <option>BIASA</option>
+                                                </select>
                                             </div>
                                         </div>
+                                        <div class=" form-group">
+                                                        <label class="col-sm-2 control-label">Harga</label>
+                                                        <div class="col-sm-6">
+                                                            <input type="text" class="form-control" name="harga" value="<?php echo "$edit[harga]"; ?>">
+                                                        </div>
+                                            </div>
+                                            <div class="hr-line-dashed"></div>
+
+                                            <div class="form-group">
+                                                <div class="col-sm-4 col-sm-offset-2">
+                                                    <button class="btn btn-primary" type="submit">Save </button>
+                                                </div>
+                                            </div>
                                     </form>
                                 </div>
                             </div>

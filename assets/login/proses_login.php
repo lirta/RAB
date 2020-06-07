@@ -17,9 +17,7 @@ if ($ketemu > 0) {
     $_SESSION['nama']            = $krwn['nama_kariawan'];
     $_SESSION['akses']           = $r['akses'];
     $_SESSION['foto']            = $krwn['foto'];
-    if ($_SESSION['akses'] == "ADMIN") {
-      header('location:../../index.php');
-    }
+    header('location:../../index.php');
   } else {
     echo '<script language="javascript">
               alert ("Mohan Maaf akses anda ditolak");

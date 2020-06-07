@@ -80,9 +80,11 @@ if (
                                                 <thead>
                                                     <tr>
                                                         <th>Gambar</th>
-                                                        <th>Kategori</th>
                                                         <th>Nama Produck</th>
-                                                        <th width="15%">Aksi</th>
+                                                        <th>Kategori</th>
+                                                        <th>Harga</th>
+                                                        <th>Deskripsi</th>
+                                                        <th width="10%">Aksi</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -92,12 +94,14 @@ if (
                                                     ?>
                                                         <tr>
                                                             <td><?php echo "<img src='../assets/foto-produck/$kolom[gambar]' width='200xp'>"; ?></td>
+                                                            <td><?php echo "$kolom[nama_produk]"; ?></td>
                                                             <td><?php echo "$kolom[nama_kategori]"; ?></td>
-                                                            <td><a <?php echo " href='produck-detail.php?id=$kolom[id_produk]'"; ?>><?php echo "$kolom[nama_produk]"; ?></a></td>
+                                                            <td><?php echo "$kolom[harga]"; ?></td>
+                                                            <td><?php echo "$kolom[keterangan]"; ?></td>
                                                             <td>
                                                                 <?php
-                                                                echo "<a href='produck-edit.php?id=$kolom[id_produk]'  class='btn btn-primary btn-sm'>EDIT</a>
-                                                                    <a href='produck-hapus.php?id=$kolom[id_produk]'  class='btn btn-danger btn-sm'>HAPUS</a> ";
+                                                                echo "<a href='produck-edit.php?id=$kolom[id_produk]'  class='btn btn-primary btn-sm'><i class='fa fa-pencil'></i></a>
+                                                                    <a href='produck-hapus.php?id=$kolom[id_produk]'  class='btn btn-danger btn-sm'><i class='fa fa-trash'></i></a> ";
 
                                                                 ?></td>
                                                             </td>

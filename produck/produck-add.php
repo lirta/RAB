@@ -113,6 +113,18 @@ if (
                                             </div>
                                         </div>
                                         <div class="form-group">
+                                            <label class="col-sm-2 col-sm-2 control-label">Harga</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" class="form-control" name="harga">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 col-sm-2 control-label">Deskripsi</label>
+                                            <div class="col-sm-6" class="summernote">
+                                                <textarea class="form-control" name="deskripsi" rows="4" cols="64"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
                                             <label class="col-sm-2 control-label">Gambar Produck</label>
                                             <div class="col-sm-6">
                                                 <input type="file" class="form-control" name="file">

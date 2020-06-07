@@ -522,7 +522,7 @@ if (
     } else {
         echo '<script language="javascript">
                         alert ("Anda Tida Punya Akses");
-                        window.location="../assets/login/logout.php";
+                        window.location="../index.php";
                         </script>';
         exit();
     }

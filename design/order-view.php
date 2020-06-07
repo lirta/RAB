@@ -1,5 +1,4 @@
-<?php
-include "../assets/coneksi/config.php";
+<?php include "../assets/coneksi/config.php";
 if (!isset($_SESSION)) {
     session_start();
 }
@@ -7,9 +6,10 @@ if (
     empty($_SESSION['username']) and
     empty($_SESSION['password'])
 ) {
-    header('location:../login.php');
+    header('location:login.php');
 } else {
-    if ($_SESSION['akses'] == "KONSUMEN") { ?>
+    if ($_SESSION['akses'] == "DESIGN") {
+?>
         <!DOCTYPE html>
         <html>
 
@@ -49,16 +49,13 @@ if (
                     </div>
                     <div class="row wrapper border-bottom white-bg page-heading">
                         <div class="col-lg-10">
-                            <h2>E-commerce product list</h2>
+                            <h2>List Orderan</h2>
                             <ol class="breadcrumb">
                                 <li>
-                                    <a href="index.html">Home</a>
-                                </li>
-                                <li>
-                                    <a>E-commerce</a>
+                                    <a href="index.php">Home</a>
                                 </li>
                                 <li class="active">
-                                    <strong>Product list</strong>
+                                    <strong>list</strong>
                                 </li>
                             </ol>
                         </div>
@@ -72,7 +69,7 @@ if (
                             <div class="col-lg-12">
                                 <div class="ibox">
                                     <div class="ibox-title">
-                                        <h3>pesanan</h3>
+                                        <h3>Orderan</h3>
                                     </div>
                                     <div class="ibox-content">
 
@@ -80,61 +77,43 @@ if (
                                             <thead>
                                                 <tr>
 
-                                                    <th data-toggle="true">Product Name</th>
-                                                    <th data-hide="all">produck</th>
+                                                    <th data-toggle="true">Tanggal Order</th>
+                                                    <th data-hide="all">Deskripsi</th>
+                                                    <th data-hide="phone">Konsumen</th>
                                                     <th data-hide="phone">Jumlah items</th>
-                                                    <th data-hide="phone">Total harga</th>
-                                                    <th data-hide="phone">Kategori</th>
                                                     <th data-hide="phone">Status</th>
+                                                    <th class="text-right" data-sort-ignore="true">Action</th>
 
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <?php $hasil = mysqli_query($koneksi, "SELECT * FROM orderan where id_konsumen='$_SESSION[id]' ");
+                                                    <?php $hasil = mysqli_query($koneksi, "SELECT * FROM orderan inner join konsumen on orderan.id_konsumen=konsumen.id_konsumen ");
                                                     $ketemu = mysqli_num_rows($hasil);
-                                                    while ($kolom = mysqli_fetch_assoc($hasil)) { ?>
-                                                        <td>
-                                                            <?php echo "$kolom[tanggal]"; ?>
-                                                        </td>
-                                                        <td>
-                                                            <?php
-                                                            if ($kolom['kategori'] == "PRODUCK") {
-                                                                $t = 0;
-                                                                $h = 0;
-                                                                $qkp = mysqli_query($koneksi, "SELECT * FROM detail_orderan  WHERE id_orderan='$kolom[id_orderan]' ");
-                                                                while ($kp = mysqli_fetch_assoc($qkp)) {
-                                                                    $qproduk = mysqli_query($koneksi, "SELECT * FROM produk WHERE id_produk='$kp[id_produk]'");
-                                                                    $pro = mysqli_fetch_assoc($qproduk);
-                                                                    $t = $t + $kp['jumlah'];
-                                                                    echo "
-                                                                            <ul>
-                                                                            <li> $pro[nama_produk]  <br> Jumlah = $kp[jumlah] <br> Harga = $pro[harga]</li>
-                                                                            </ul>
-                                                                            ";
-                                                                    $h = $h + $kp['harga'];
-                                                                }
-                                                            } else {
-                                                                $qkp = mysqli_query($koneksi, "SELECT * FROM detail_orderan  WHERE id_orderan='$kolom[id_orderan]' ");
-                                                                while ($kp = mysqli_fetch_assoc($qkp)) {
-                                                                }
-                                                            }
-                                                            ?>
-
-
-                                                        </td>
-                                                        <?php if ($kolom['kategori'] == "PRODUCK") { ?>
-
-                                                            <td><?php echo "$t"; ?></td>
-                                                            <td><?php echo "Rp.  " . number_format($h, 2, ".", ","); ?></td>
-                                                        <?php   } else { ?>
-                                                            <td><?php echo "kosong"; ?></td>
-                                                            <td><?php echo "Rp.  "  ?></td>
-                                                        <?php  }  ?>
-                                                        <td><?php echo "$kolom[kategori]"; ?></td>
-                                                        <td><?php echo "$kolom[status_order]"; ?></td>
+                                                    while ($kolom = mysqli_fetch_assoc($hasil)) {
+                                                        if ($kolom['kategori'] == "KASTEM" and $kolom['status_order'] == "KONFIRMASI") {
+                                                            $qkastem = mysqli_query($koneksi, "SELECT * FROM detail_orderan_kastem WHERE id_orderan='$kolom[id_orderan]'");
+                                                            while ($kastem = mysqli_fetch_assoc($qkastem)) { ?>
+                                                                <td><?php echo "$kolom[tanggal]"; ?></td>
+                                                                <td><?php echo "$kastem[keterangan_kastem]"; ?></td>
+                                                                <td><?php echo "$kolom[nama_konsumen]"; ?></td>
+                                                                <td><?php echo "$kastem[jumlah_kastem]"; ?></td>
+                                                                <td><?php echo "$kolom[status_order]"; ?></td>
+                                                                <td class="text-right">
+                                                                    <div class="btn-group">
+                                                                        <?php
+                                                                        echo "
+                                                                        <a href='order-selesai.php?id=$kolom[id_orderan]'  class='btn btn-success btn-xs'>SELESAI</a>
+                                                                        <a href='ukuran-add.php?id=$kolom[id_orderan]'  class='btn btn-primary btn-xs'>UKURAN</a>
+                                                                        <a href='bahan-add.php?id=$kolom[id_orderan]'  class='btn btn-primary btn-xs'>BAHAN</a>
+                                                                        <a href='order-detail.php?id=$kolom[id_orderan]' target='_blank'  class='btn btn-primary btn-xs'>DETAIL</a> ";
+                                                                        ?>
+                                                                    </div>
+                                                                </td>
                                                 </tr>
-                                            <?php } ?>
+                                    <?php }
+                                                        }
+                                                    } ?>
 
 
                                             </tbody>
@@ -194,12 +173,12 @@ if (
 
         </html>
 
-
-<?php  } else {
+<?php
+    } else {
         echo '<script language="javascript">
-                    alert ("Anda Tidak Punya Akses");
-                    window.location="../assets/login/logout.php";
-                    </script>';
+                        alert ("Anda Tida Punya Akses");
+                        window.location="../index.php";
+                        </script>';
         exit();
     }
-}
+}; ?>
