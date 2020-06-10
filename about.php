@@ -1,347 +1,307 @@
-<!DOCTYPE html>
-<html lang="en">
-<?php include 'head.php'; ?>
-    <!-- END nav -->
-    
-    <section class="home-slider js-fullheight owl-carousel">
-      <div class="slider-item js-fullheight" style="background-image:url(images/bg_1.jpg);">
-      	<div class="overlay"></div>
+<!doctype html>
+<html class="no-js" lang="zxx">
+<?php include 'header.php'; ?>
+<main>
+    <!--? Hero Start -->
+    <div class="slider-area2">
+        <div class="slider-height2 hero-overly d-flex align-items-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="hero-cap hero-cap2 text-center pt-80">
+                            <h2>About Us</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+    <!--? our info Start -->
+    <div class="our-info-area pt-170 pb-100 section-bg" data-background="assets/img/gallery/section_bg02.jpg">
         <div class="container">
-          <div class="row slider-text justify-content-center align-items-center">
-
-            <div class="col-md-7 col-sm-12 text-center ftco-animate">
-            	<h1 class="mb-3 mt-5 bread">About</h1>
-	            <p class="breadcrumbs"><span class="mr-2"><a href="index.php">Home</a></span> <span>About</span></p>
+            <div class="row justify-content-between">
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                    <div class="single-info mb-60">
+                        <div class="info-caption">
+                            <h4>Clean and Services</h4>
+                            <p>For each project we establish relationships with partners who we know will help us. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                    <div class="single-info mb-60">
+                        <div class="info-caption">
+                            <h4>Clean and Modern</h4>
+                            <p>For each project we establish relationships with partners who we know will help us. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                    <div class="single-info mb-60">
+                        <div class="info-caption">
+                            <h4>Clean and Modern</h4>
+                            <p>For each project we establish relationships with partners who we know will help us. </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-          </div>
         </div>
-      </div>
+    </div>
+    <!-- Our Info start -->
+    <!--? Professional Services Start -->
+    <div class="professional-services section-bg d-none d-md-block" data-background="assets/img/gallery/section_bg04.jpg"></div>
+    <div class="profession-caption">
+        <div class="container">
+            <div class="row align-items-end">
+                <div class="col-lg-8">
+                    <!-- Section Tittle -->
+                    <div class="section-tittle profession-details">
+                        <span>Our Professional Services</span>
+                        <h2>We will create modern and first class intorior.</h2>
+                        <p>Aorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <a href="about.html" class="btn btn3">Discover More About Ous</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Professional Services End -->
+    <!-- Team Start -->
+    <div class="team-area section-padding30">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="cl-xl-7 col-lg-8 col-md-10">
+                    <!-- Section Tittle -->
+                    <div class="section-tittle text-center mb-70">
+                        <span>Creative derector</span>
+                        <h2>Best Interitor Services</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- single Tem -->
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
+                    <div class="single-team mb-30">
+                        <div class="team-img">
+                            <img src="assets/img/gallery/team2.png" alt="">
+                        </div>
+                        <div class="team-caption">
+                            <h3><a href="#">Jhon Sunsa</a></h3>
+                            <span>Creative derector</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
+                    <div class="single-team mb-30">
+                        <div class="team-img">
+                            <img src="assets/img/gallery/team3.png" alt="">
+                        </div>
+                        <div class="team-caption">
+                            <h3><a href="#">Jhon Sunsa</a></h3>
+                            <span>Creative derector</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
+                    <div class="single-team mb-30">
+                        <div class="team-img">
+                            <img src="assets/img/gallery/team1.png" alt="">
+                        </div>
+                        <div class="team-caption">
+                            <h3><a href="#">Jhon Sunsa</a></h3>
+                            <span>Creative derector</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+    <!-- Testimonial Start -->
+    <div class="testimonial-area testimonial-padding">
+        <div class="container">
+            <!-- Testimonial contents -->
+            <div class="row d-flex justify-content-center">
+                <div class="col-xl-8 col-lg-8 col-md-10">
+                    <div class="h1-testimonial-active dot-style">
+                        <!-- Single Testimonial -->
+                        <div class="single-testimonial text-center">
+                            <!-- Testimonial Content -->
+                            <div class="testimonial-caption ">
+                                <div class="testimonial-top-cap">
+                                    <img src="assets/img/gallery/testi-logo.png" alt="">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
+                                </div>
+                                <!-- founder -->
+                                <div class="testimonial-founder  ">
+                                    <div class="founder-img">
+                                        <span><strong>Christine Eve</strong> - Co Founder</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Testimonial -->
+                        <div class="single-testimonial text-center">
+                            <!-- Testimonial Content -->
+                            <div class="testimonial-caption ">
+                                <div class="testimonial-top-cap">
+                                    <img src="assets/img/gallery/testi-logo.png" alt="">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
+                                </div>
+                                <!-- founder -->
+                                <div class="testimonial-founder  ">
+                                    <div class="founder-img">
+                                        <span><strong>Christine Eve</strong> - Co Founder</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+    <!-- Brand Area Start -->
+    <div class="brand-area pt-120 pb-120">
+        <div class="container">
+            <div class="brand-active brand-border pt-50 pb-40">
+                <div class="single-brand">
+                    <img src="assets/img/gallery/brand1.png" alt="">
+                </div>
+                <div class="single-brand">
+                    <img src="assets/img/gallery/brand2.png" alt="">
+                </div>
+                <div class="single-brand">
+                    <img src="assets/img/gallery/brand3.png" alt="">
+                </div>
+                <div class="single-brand">
+                    <img src="assets/img/gallery/brand4.png" alt="">
+                </div>
+                <div class="single-brand">
+                    <img src="assets/img/gallery/brand2.png" alt="">
+                </div>
+                <div class="single-brand">
+                    <img src="assets/img/gallery/brand5.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Brand Area End -->
+    <!-- Want To work -->
+    <section class="wantToWork-area w-padding2">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-xl-8 col-lg-8 col-md-8">
+                    <div class="wantToWork-caption wantToWork-caption2">
+                        <h2>Are you Searching For a First-Class Consultant?</h2>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-3">
+                    <a href="#" class="btn btn-black f-right">Contact Us</a>
+                </div>
+            </div>
+        </div>
     </section>
-
-		<section class="ftc-no-pb">
-			<div class="container">
-				<div class="row no-gutters">
-					<div class="col-md-5 p-md-5 img img-2" style="background-image: url(images/about.jpg);">
-					</div>
-					<div class="col-md-7 wrap-about pb-md-5 pt-5 ftco-animate">
-	          <div class="heading-section mb-5 pl-md-5 heading-section-with-line">
-	          	<div class="pl-md-5 ml-md-5">
-		          	<span class="subheading">About</span>
-		            <h2 class="mb-4">We are the best interior &amp; Architect Consultant in Italy</h2>
-	            </div>
-	          </div>
-	          <div class="pl-md-5 ml-md-5 mb-5">
-							<p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their.</p>
-							<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.</p>
-							<p><a href="#" class="btn-custom">Learn More <span class="ion-ios-arrow-forward"></span></a></p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-
-		<section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(images/bg_3.jpg);" data-stellar-background-ratio="0.5">
-    	<div class="container">
-    		<div class="row d-md-flex align-items-center justify-content-center">
-    			<div class="col-lg-4">
-    				<div class="heading-section pl-md-5 heading-section-white">
-	          	<div class="pl-md-5 ml-md-5 ftco-animate">
-		          	<span class="subheading">Some</span>
-		            <h2 class="mb-4">Interesting Facts</h2>
-	            </div>
-	          </div>
-    			</div>
-    			<div class="col-lg-8">
-    				<div class="row d-md-flex align-items-center">
-		          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-		            <div class="block-18 text-center">
-		              <div class="text">
-		                <strong class="number" data-number="18">0</strong>
-		                <span>Years of Experienced</span>
-		              </div>
-		            </div>
-		          </div>
-		          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-		            <div class="block-18 text-center">
-		              <div class="text">
-		                <strong class="number" data-number="351">0</strong>
-		                <span>Happy Clients</span>
-		              </div>
-		            </div>
-		          </div>
-		          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-		            <div class="block-18 text-center">
-		              <div class="text">
-		                <strong class="number" data-number="564">0</strong>
-		                <span>Finished Projects</span>
-		              </div>
-		            </div>
-		          </div>
-		          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-		            <div class="block-18 text-center">
-		              <div class="text">
-		                <strong class="number" data-number="300">0</strong>
-		                <span>Working Days</span>
-		              </div>
-		            </div>
-		          </div>
-	          </div>
-          </div>
-        </div>
-    	</div>
-    </section>
-
-    <section class="ftco-section testimony-section">
-      <div class="container">
-        <div class="row justify-content-center mb-5 pb-3">
-          <div class="col-md-7 heading-section ftco-animate">
-            <h2 class="mb-4">Our satisfied customer says</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
-          </div>
-        </div>
-        <div class="row ftco-animate">
-          <div class="col-md-12">
-            <div class="carousel-testimony owl-carousel">
-              <div class="item">
-                <div class="testimony-wrap p-4 pb-5">
-                  <div class="user-img mb-5" style="background-image: url(images/person_1.jpg)">
-                    <span class="quote d-flex align-items-center justify-content-center">
-                      <i class="icon-quote-left"></i>
-                    </span>
-                  </div>
-                  <div class="text">
-                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Garreth Smith</p>
-                    <span class="position">Marketing Manager</span>
-                  </div>
+    <!-- Want To work End -->
+    <!-- Blog Area Start -->
+    <div class="home-blog-area section-padding30">
+        <div class="container">
+            <!-- Section Tittle -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-tittle text-center mb-70">
+                        <span>Our latest blog</span>
+                        <h2>Our recent news</h2>
+                    </div>
                 </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap p-4 pb-5">
-                  <div class="user-img mb-5" style="background-image: url(images/person_2.jpg)">
-                    <span class="quote d-flex align-items-center justify-content-center">
-                      <i class="icon-quote-left"></i>
-                    </span>
-                  </div>
-                  <div class="text">
-                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Garreth Smith</p>
-                    <span class="position">Interface Designer</span>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap p-4 pb-5">
-                  <div class="user-img mb-5" style="background-image: url(images/person_3.jpg)">
-                    <span class="quote d-flex align-items-center justify-content-center">
-                      <i class="icon-quote-left"></i>
-                    </span>
-                  </div>
-                  <div class="text">
-                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Garreth Smith</p>
-                    <span class="position">UI Designer</span>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap p-4 pb-5">
-                  <div class="user-img mb-5" style="background-image: url(images/person_1.jpg)">
-                    <span class="quote d-flex align-items-center justify-content-center">
-                      <i class="icon-quote-left"></i>
-                    </span>
-                  </div>
-                  <div class="text">
-                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Garreth Smith</p>
-                    <span class="position">Web Developer</span>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap p-4 pb-5">
-                  <div class="user-img mb-5" style="background-image: url(images/person_1.jpg)">
-                    <span class="quote d-flex align-items-center justify-content-center">
-                      <i class="icon-quote-left"></i>
-                    </span>
-                  </div>
-                  <div class="text">
-                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Garreth Smith</p>
-                    <span class="position">System Analyst</span>
-                  </div>
-                </div>
-              </div>
             </div>
-          </div>
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-6">
+                    <div class="home-blog-single mb-30">
+                        <div class="blog-img-cap">
+                            <div class="blog-img">
+                                <img src="assets/img/gallery/home_blog1.png" alt="">
+                            </div>
+                            <ul>
+                                <li class="black-bg">October 27, 2020</li>
+                                <li>By Admin - 30 Likes - 4 Comments</li>
+                            </ul>
+                            <div class="blog-cap">
+                                <h3><a href="blog_details.html">16 Easy Ideas to Use Everyday
+                                        Stuff in Kitchen.</a></h3>
+                                <a href="blog_details.html" class="more-btn">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6">
+                    <div class="home-blog-single mb-30">
+                        <div class="blog-img-cap">
+                            <div class="blog-img">
+                                <img src="assets/img/gallery/home_blog2.png" alt="">
+                            </div>
+                            <ul>
+                                <li class="black-bg">October 27, 2020</li>
+                                <li>By Admin - 30 Likes - 4 Comments</li>
+                            </ul>
+                            <div class="blog-cap">
+                                <h3><a href="blog_details.html">16 Easy Ideas to Use Everyday
+                                        Stuff in Kitchen.</a></h3>
+                                <a href="blog_details.html" class="more-btn">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </section>
-			
-		<section class="ftco-section">
-			<div class="container">
-				<div class="row justify-content-center mb-5 pb-3">
-          <div class="col-md-7 heading-section ftco-animate">
-            <h2 class="mb-4">Our Architect Team</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
-          </div>
-        </div>	
-				<div class="row">
-					<div class="col-md-6 col-lg-3 ftco-animate">
-						<div class="staff">
-							<div class="img" style="background-image: url(images/staff-1.jpg);"></div>
-							<div class="text pt-4">
-								<h3>David Smith</h3>
-								<span class="position mb-2">Achitect</span>
-								<p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
-								<ul class="ftco-social d-flex">
-	                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-	                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-	                <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
-	                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-	              </ul>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6 col-lg-3 ftco-animate">
-						<div class="staff">
-							<div class="img" style="background-image: url(images/staff-2.jpg);"></div>
-							<div class="text pt-4">
-								<h3>David Smith</h3>
-								<span class="position mb-2">Achitect</span>
-								<p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
-								<ul class="ftco-social d-flex">
-	                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-	                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-	                <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
-	                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-	              </ul>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6 col-lg-3 ftco-animate">
-						<div class="staff">
-							<div class="img" style="background-image: url(images/staff-3.jpg);"></div>
-							<div class="text pt-4">
-								<h3>David Smith</h3>
-								<span class="position mb-2">Achitect</span>
-								<p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
-								<ul class="ftco-social d-flex">
-	                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-	                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-	                <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
-	                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-	              </ul>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6 col-lg-3 ftco-animate">
-						<div class="staff">
-							<div class="img" style="background-image: url(images/staff-4.jpg);"></div>
-							<div class="text pt-4">
-								<h3>David Smith</h3>
-								<span class="position mb-2">Achitect</span>
-								<p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
-								<ul class="ftco-social d-flex">
-	                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-	                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-	                <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
-	                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-	              </ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+    </div>
+    <!-- Blog Area End -->
 
-    <footer class="ftco-footer ftco-bg-dark ftco-section">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Klift</h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
-                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4 ml-md-4">
-              <h2 class="ftco-heading-2">Links</h2>
-              <ul class="list-unstyled">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Services</h2>
-              <ul class="list-unstyled">
-                <li><a href="#">Architectural Design</a></li>
-                <li><a href="#">Interior Design</a></li>
-                <li><a href="#">Exterior Design</a></li>
-                <li><a href="#">Lighting Design</a></li>
-                <li><a href="#">AutoCAD Service</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-            	<h2 class="ftco-heading-2">Have a Questions?</h2>
-            	<div class="block-23 mb-3">
-	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
-	              </ul>
-	            </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12 text-center">
+</main>
+<?php include 'footer.php'; ?>
+<!-- Scroll Up -->
+<div id="back-top">
+    <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+</div>
 
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-          </div>
-        </div>
-      </div>
-    </footer>
-    
-  
+<!-- JS here -->
+<!-- All JS Custom Plugins Link Here here -->
+<script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+<!-- Jquery, Popper, Bootstrap -->
+<script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+<script src="./assets/js/popper.min.js"></script>
+<script src="./assets/js/bootstrap.min.js"></script>
+<!-- Jquery Mobile Menu -->
+<script src="./assets/js/jquery.slicknav.min.js"></script>
 
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+<!-- Jquery Slick , Owl-Carousel Plugins -->
+<script src="./assets/js/owl.carousel.min.js"></script>
+<script src="./assets/js/slick.min.js"></script>
+<!-- One Page, Animated-HeadLin -->
+<script src="./assets/js/wow.min.js"></script>
+<script src="./assets/js/animated.headline.js"></script>
+<script src="./assets/js/jquery.magnific-popup.js"></script>
 
+<!-- Nice-select, sticky -->
+<script src="./assets/js/jquery.nice-select.min.js"></script>
+<script src="./assets/js/jquery.sticky.js"></script>
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/bootstrap-datepicker.js"></script>
-  <script src="js/jquery.timepicker.min.js"></script>
-  <script src="js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="js/google-map.js"></script>
-  <script src="js/main.js"></script>
-    
-  </body>
+<!-- contact js -->
+<script src="./assets/js/contact.js"></script>
+<script src="./assets/js/jquery.form.js"></script>
+<script src="./assets/js/jquery.validate.min.js"></script>
+<script src="./assets/js/mail-script.js"></script>
+<script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+
+<!-- Jquery Plugins, main Jquery -->
+<script src="./assets/js/plugins.js"></script>
+<script src="./assets/js/main.js"></script>
+
+</body>
+
 </html>

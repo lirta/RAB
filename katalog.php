@@ -1,218 +1,225 @@
-<!DOCTYPE html>
-<html lang="en">
-<?php include 'head.php'; ?>
-    <!-- END nav -->
-    
-    <section class="home-slider js-fullheight owl-carousel">
-      <div class="slider-item js-fullheight" style="background-image:url(images/bg_1.jpg);">
-      	<div class="overlay"></div>
+<!doctype html>
+<html class="no-js" lang="zxx">
+<?php include 'header.php'; ?>
+<main>
+    <!--? Hero Start -->
+    <div class="slider-area2">
+        <div class="slider-height2 hero-overly d-flex align-items-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="hero-cap hero-cap2 text-center pt-80">
+                            <h2>Our Services</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+    <!--? our info Start -->
+    <div class="our-info-area pt-170 pb-100 section-bg" data-background="assets/img/gallery/section_bg02.jpg">
         <div class="container">
-          <div class="row slider-text justify-content-center align-items-center">
-
-            <div class="col-md-7 col-sm-12 text-center ftco-animate">
-            	<h1 class="mb-3 mt-5 bread">Blog</h1>
-	            <p class="breadcrumbs"><span class="mr-2"><a href="index.php">Home</a></span> <span>Blog</span></p>
+            <div class="row justify-content-between">
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                    <div class="single-info mb-60">
+                        <div class="info-caption">
+                            <h4>Clean and Services</h4>
+                            <p>For each project we establish relationships with partners who we know will help us. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                    <div class="single-info mb-60">
+                        <div class="info-caption">
+                            <h4>Clean and Modern</h4>
+                            <p>For each project we establish relationships with partners who we know will help us. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                    <div class="single-info mb-60">
+                        <div class="info-caption">
+                            <h4>Clean and Modern</h4>
+                            <p>For each project we establish relationships with partners who we know will help us. </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-          </div>
         </div>
-      </div>
+    </div>
+    <!-- Our Info start -->
+    <!--? Services Ara Start -->
+    <div class="services-area section-padding3">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="cl-xl-7 col-lg-8 col-md-10">
+                    <!-- Section Tittle -->
+                    <div class="section-tittle text-center mb-70">
+                        <span>Our Professional Services</span>
+                        <h2>Best Interitor Services</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-10">
+                    <div class="single-services mb-200">
+                        <div class="services-img">
+                            <img src="assets/img/gallery/services1.png" alt="">
+                        </div>
+                        <div class="services-caption">
+                            <h3><a href="services.html">Lighting</a></h3>
+                            <p class="pera1">For each project we establish </p>
+                            <p class="pera2">For each project we establish relationships with partners who we know will help us. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-10">
+                    <div class="single-services mb-200">
+                        <div class="services-img">
+                            <img src="assets/img/gallery/services2.png" alt="">
+                        </div>
+                        <div class="services-caption">
+                            <h3><a href="services.html">Interior Design</a></h3>
+                            <p class="pera1">For each project we establish </p>
+                            <p class="pera2">For each project we establish relationships with partners who we know will help us. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-10">
+                    <div class="single-services mb-200">
+                        <div class="services-img">
+                            <img src="assets/img/gallery/services3.png" alt="">
+                        </div>
+                        <div class="services-caption">
+                            <h3><a href="services.html">Office Decoretion</a></h3>
+                            <p class="pera1">For each project we establish </p>
+                            <p class="pera2">For each project we establish relationships with partners who we know will help us. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-10">
+                    <div class="single-services mb-200">
+                        <div class="services-img">
+                            <img src="assets/img/gallery/services4.png" alt="">
+                        </div>
+                        <div class="services-caption">
+                            <h3><a href="services.html">Lighting</a></h3>
+                            <p class="pera1">For each project we establish </p>
+                            <p class="pera2">For each project we establish relationships with partners who we know will help us. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-10">
+                    <div class="single-services mb-200">
+                        <div class="services-img">
+                            <img src="assets/img/gallery/services5.png" alt="">
+                        </div>
+                        <div class="services-caption">
+                            <h3><a href="services.html">Interior Design</a></h3>
+                            <p class="pera1">For each project we establish </p>
+                            <p class="pera2">For each project we establish relationships with partners who we know will help us. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-10">
+                    <div class="single-services mb-200">
+                        <div class="services-img">
+                            <img src="assets/img/gallery/services6.png" alt="">
+                        </div>
+                        <div class="services-caption">
+                            <h3><a href="services.html">Office Decoretion</a></h3>
+                            <p class="pera1">For each project we establish </p>
+                            <p class="pera2">For each project we establish relationships with partners who we know will help us. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Services Ara End -->
+    <!-- Brand Area Start -->
+    <div class="brand-area pt-120 pb-120">
+        <div class="container">
+            <div class="brand-active brand-border pt-50 pb-40">
+                <div class="single-brand">
+                    <img src="assets/img/gallery/brand1.png" alt="">
+                </div>
+                <div class="single-brand">
+                    <img src="assets/img/gallery/brand2.png" alt="">
+                </div>
+                <div class="single-brand">
+                    <img src="assets/img/gallery/brand3.png" alt="">
+                </div>
+                <div class="single-brand">
+                    <img src="assets/img/gallery/brand4.png" alt="">
+                </div>
+                <div class="single-brand">
+                    <img src="assets/img/gallery/brand2.png" alt="">
+                </div>
+                <div class="single-brand">
+                    <img src="assets/img/gallery/brand5.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Brand Area End -->
+    <!-- Want To work -->
+    <section class="wantToWork-area w-padding2">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-xl-8 col-lg-8 col-md-8">
+                    <div class="wantToWork-caption wantToWork-caption2">
+                        <h2>Are you Searching For a First-Class Consultant?</h2>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-3">
+                    <a href="#" class="btn btn-black f-right">Contact Us</a>
+                </div>
+            </div>
+        </div>
     </section>
+    <!-- Want To work End -->
+</main>
+<?php include 'footer.php'; ?>
+<!-- Scroll Up -->
+<div id="back-top">
+    <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+</div>
 
-		<section class="ftco-section">
-			<div class="container">
-				<div class="row justify-content-center mb-5 pb-3">
-          <div class="col-md-7 heading-section ftco-animate">
-            <h2 class="mb-4">Recent Blog</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
-          </div>
-        </div>	
-				<div class="row">
-          <div class="col-md-4 ftco-animate">
-            <div class="blog-entry">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
-              </a>
-              <div class="text d-flex py-4">
-                <div class="meta mb-3">
-                  <div><a href="#">Sep. 20, 2018</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                </div>
-                <div class="desc pl-3">
-	                <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-	              </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 ftco-animate">
-            <div class="blog-entry" data-aos-delay="100">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
-              </a>
-              <div class="text d-flex py-4">
-                <div class="meta mb-3">
-                  <div><a href="#">Sep. 20, 2018</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                </div>
-                <div class="desc pl-3">
-	                <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-	              </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 ftco-animate">
-            <div class="blog-entry" data-aos-delay="200">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
-              </a>
-              <div class="text d-flex py-4">
-                <div class="meta mb-3">
-                  <div><a href="#">Sep. 20, 2018</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                </div>
-                <div class="desc pl-3">
-	                <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-	              </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 ftco-animate">
-            <div class="blog-entry">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_4.jpg');">
-              </a>
-              <div class="text d-flex py-4">
-                <div class="meta mb-3">
-                  <div><a href="#">Sep. 20, 2018</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                </div>
-                <div class="desc pl-3">
-	                <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-	              </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 ftco-animate">
-            <div class="blog-entry" data-aos-delay="100">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_5.jpg');">
-              </a>
-              <div class="text d-flex py-4">
-                <div class="meta mb-3">
-                  <div><a href="#">Sep. 20, 2018</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                </div>
-                <div class="desc pl-3">
-	                <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-	              </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 ftco-animate">
-            <div class="blog-entry" data-aos-delay="200">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_6.jpg');">
-              </a>
-              <div class="text d-flex py-4">
-                <div class="meta mb-3">
-                  <div><a href="#">Sep. 20, 2018</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                </div>
-                <div class="desc pl-3">
-	                <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-	              </div>
-              </div>
-            </div>
-          </div>
-        </div>
-			</div>
-		</section>
+<!-- JS here -->
+<!-- All JS Custom Plugins Link Here here -->
+<script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+<!-- Jquery, Popper, Bootstrap -->
+<script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+<script src="./assets/js/popper.min.js"></script>
+<script src="./assets/js/bootstrap.min.js"></script>
+<!-- Jquery Mobile Menu -->
+<script src="./assets/js/jquery.slicknav.min.js"></script>
 
-    <footer class="ftco-footer ftco-bg-dark ftco-section">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Klift</h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
-                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4 ml-md-4">
-              <h2 class="ftco-heading-2">Links</h2>
-              <ul class="list-unstyled">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Services</h2>
-              <ul class="list-unstyled">
-                <li><a href="#">Architectural Design</a></li>
-                <li><a href="#">Interior Design</a></li>
-                <li><a href="#">Exterior Design</a></li>
-                <li><a href="#">Lighting Design</a></li>
-                <li><a href="#">AutoCAD Service</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-            	<h2 class="ftco-heading-2">Have a Questions?</h2>
-            	<div class="block-23 mb-3">
-	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
-	              </ul>
-	            </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12 text-center">
+<!-- Jquery Slick , Owl-Carousel Plugins -->
+<script src="./assets/js/owl.carousel.min.js"></script>
+<script src="./assets/js/slick.min.js"></script>
+<!-- One Page, Animated-HeadLin -->
+<script src="./assets/js/wow.min.js"></script>
+<script src="./assets/js/animated.headline.js"></script>
+<script src="./assets/js/jquery.magnific-popup.js"></script>
 
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-          </div>
-        </div>
-      </div>
-    </footer>
-    
-  
+<!-- Nice-select, sticky -->
+<script src="./assets/js/jquery.nice-select.min.js"></script>
+<script src="./assets/js/jquery.sticky.js"></script>
 
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+<!-- contact js -->
+<script src="./assets/js/contact.js"></script>
+<script src="./assets/js/jquery.form.js"></script>
+<script src="./assets/js/jquery.validate.min.js"></script>
+<script src="./assets/js/mail-script.js"></script>
+<script src="./assets/js/jquery.ajaxchimp.min.js"></script>
 
+<!-- Jquery Plugins, main Jquery -->
+<script src="./assets/js/plugins.js"></script>
+<script src="./assets/js/main.js"></script>
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/bootstrap-datepicker.js"></script>
-  <script src="js/jquery.timepicker.min.js"></script>
-  <script src="js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="js/google-map.js"></script>
-  <script src="js/main.js"></script>
-    
-  </body>
+</body>
+
 </html>
