@@ -2,7 +2,7 @@
 include "../assets/coneksi/config.php";
 
 $date = date(' d/m/Y');
-$acak = rand(0000, 9999);
+$acak = rand(0000000, 9999999);
 $s = "ORDER";
 $k = "PRODUCK";
 
@@ -13,7 +13,7 @@ $jumlah = $_POST['qrt'];
 $cart = $_POST['id'];
 $h = $_POST['harga'];
 
-$id_order = $acak . $konsumen;
+$id_order = "ORDERPRODUK" . $acak;
 
 mysqli_query($koneksi, "INSERT INTO orderan (id_orderan,
                                             id_konsumen,

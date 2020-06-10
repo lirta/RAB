@@ -25,15 +25,15 @@
     <li>
         <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">Bahan</span><span class="fa arrow"></span></a>
         <ul class="nav nav-second-level collapse">
-            <li><a href="../bahan/bahan-kategori-view.php">Kategori Bahan</a></li>
-            <li><a href="../bahan/bahan-view.php">Bahan</a></li>
+            <li><a href="bahan-kategori-view.php">Kategori Bahan</a></li>
+            <li><a href="bahan-view.php">Bahan</a></li>
         </ul>
     </li>
     <li>
         <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">Produck</span><span class="fa arrow"></span></a>
         <ul class="nav nav-second-level collapse">
-            <li><a href="../produck/produck-kategori-view.php">Kategori Produck</a></li>
-            <li><a href="../produck/produck-view.php">Produck</a></li>
+            <li><a href="produck-kategori-view.php">Kategori Produck</a></li>
+            <li><a href="produck-view.php">Produck</a></li>
         </ul>
     </li>
     <li>

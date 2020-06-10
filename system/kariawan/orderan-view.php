@@ -88,55 +88,52 @@ if (
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr>
-                                                    <?php $hasil = mysqli_query($koneksi, "SELECT * FROM orderan inner join konsumen on orderan.id_konsumen=konsumen.id_konsumen ");
-                                                    $ketemu = mysqli_num_rows($hasil);
-                                                    while ($kolom = mysqli_fetch_assoc($hasil)) {
-                                                        if ($kolom['kategori'] == "KASTEM") {
-                                                            $qkastem = mysqli_query($koneksi, "SELECT * FROM detail_orderan_kastem WHERE id_orderan='$kolom[id_orderan]'");
-                                                            while ($kastem = mysqli_fetch_assoc($qkastem)) { ?>
-                                                                <td><?php echo "$kolom[tanggal]"; ?></td>
-                                                                <td><?php echo "$kastem[keterangan_kastem]"; ?></td>
-                                                                <td><?php echo "$kolom[nama_konsumen]"; ?></td>
-                                                                <td><?php echo "$kastem[jumlah_kastem]"; ?></td>
-                                                                <td><?php echo "$kolom[kategori]"; ?></td>
-                                                                <td><?php echo "$kolom[status_order]"; ?></td>
-                                                                <td class="text-right">
-                                                                    <div class="btn-group">
-                                                                        <?php
-                                                                        echo "
-                                                                        <a href='order-selesai.php?id=$kolom[id_orderan]'  class='btn btn-success btn-xs'>SELESAI</a>
-                                                                        <a href='ukuran-add.php?id=$kolom[id_orderan]'  class='btn btn-primary btn-xs'>UKURAN</a>
-                                                                        <a href='bahan-add.php?id=$kolom[id_orderan]'  class='btn btn-primary btn-xs'>BAHAN</a>
-                                                                        <a href='order-detail.php?id=$kolom[id_orderan]' target='_blank'  class='btn btn-primary btn-xs'>DETAIL</a> ";
-                                                                        ?>
-                                                                    </div>
-                                                                </td>
-                                                </tr>
-                                            <?php }
-                                                        } else {
-                                                            $qproduk = mysqli_query($koneksi, "SELECT * FROM detail_orderan WHERE id_orderan='$kolom[id_orderan]'");
-                                                            while ($produk = mysqli_fetch_assoc($qproduk)) { ?>
-                                                <td><?php echo "$kolom[tanggal]"; ?></td>
-                                                <td><?php echo ""; ?></td>
-                                                <td><?php echo "$kolom[nama_konsumen]"; ?></td>
-                                                <td><?php echo "$produk[jumlah]"; ?></td>
-                                                <td><?php echo "$kolom[kategori]"; ?></td>
-                                                <td><?php echo "$kolom[status_order]"; ?></td>
-                                                <td class="text-right">
-                                                    <div class="btn-group">
-                                                        <?php
-                                                                echo "
-                                                                        <a href='order-selesai.php?id=$kolom[id_orderan]'  class='btn btn-success btn-xs'>SELESAI</a>
-                                                                        <a href='order-detail.php?id=$kolom[id_orderan]' target='_blank'  class='btn btn-primary btn-xs'>DETAIL</a> ";
-                                                        ?>
-                                                    </div>
-                                                </td>
-                                                </tr>
-                                    <?php }
-                                                        }
+                                                <?php $hasil = mysqli_query($koneksi, "SELECT * FROM orderan inner join konsumen on orderan.id_konsumen=konsumen.id_konsumen ");
+                                                while ($kolom = mysqli_fetch_assoc($hasil)) {
+                                                    if ($kolom['status_order'] == "ORDER") {
+                                                ?>
+                                                        <tr>
+                                                            <td>
+                                                                <?php echo "$kolom[tanggal]"; ?>
+                                                            </td>
+                                                            <td>
+                                                                <?php
+                                                                if ($kolom['kategori'] == "PRODUCK") {
+                                                                    $qkp = mysqli_query($koneksi, "SELECT * FROM detail_orderan INNER JOIN produk  on detail_orderan.id_produk=produk.id_produk inner join kategori_produk on produk.id_kategori_produk=kategori_produk.id_kategori_produk  WHERE id_orderan='$kolom[id_orderan]' ");
+                                                                    $j = 0;
+                                                                    while ($kp = mysqli_fetch_assoc($qkp)) {
+                                                                        $j = $j + $kp['jumlah'];
+                                                                        echo " 
+                                                                        
+                                                                            <ul>
+                                                                                <li>$kp[nama_produk]</li>
+                                                                                <li>Kategori Produck = $kp[nama_kategori]</li>
+                                                                                <li>Jumlah = $kp[jumlah]</li>
+                                                                            </ul> <hr>
+                                                                        
+                                                                        ";
+                                                                    }
+                                                                } elseif ($kolom['kategori'] == "KASTEM") {
+                                                                    $qks = mysqli_query($koneksi, "SELECT * FROM detail_orderan_kastem  WHERE id_orderan='$kolom[id_orderan]' ");
+                                                                    $ks = mysqli_fetch_assoc($qks);
+                                                                    echo " $ks[keterangan_kastem]
+                                                                        
+                                                                        ";
+                                                                } ?>
+                                                            </td>
+                                                            <td><?php echo "$kolom[nama_konsumen]"; ?></td>
+                                                            <td><?php if ($kolom['kategori'] == "PRODUCK") {
+                                                                    echo "$j";
+                                                                } elseif ($kolom['kategori'] == "KASTEM") {
+                                                                    echo "$ks[jumlah_kastem]";
+                                                                } ?></td>
+                                                            <td><?php echo "$kolom[kategori]"; ?></td>
+                                                            <td><?php echo "$kolom[status_order]"; ?></td>
+                                                        </tr>
+                                                <?php
                                                     }
-                                    ?>
+                                                }
+                                                ?>
 
 
                                             </tbody>

@@ -19,7 +19,7 @@ if (
 
         $konsumen = $_SESSION['id'];
 
-        $id_order = $acak . $konsumen;
+        $id_order = "ORDERKASTEM" . $acak;
 
         mysqli_query($koneksi, "INSERT INTO orderan (id_orderan,
                                             id_konsumen,

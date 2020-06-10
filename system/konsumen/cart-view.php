@@ -80,7 +80,6 @@ if (
                                             $qkp = mysqli_query($koneksi, "SELECT * FROM kategori_produk WHERE id_kategori_produk='$kolom[id_kategori_produk]' ");
                                             $kp = mysqli_fetch_assoc($qkp);
                                         ?>
-
                                             <div class="ibox-content">
                                                 <div class="table-responsive">
                                                     <table class="table shoping-cart-table">
@@ -121,15 +120,15 @@ if (
 
 
                                                                 <div class="form-group" hidden>
-                                                                    <input type="text" class="form-control" name="harga[]" id="h" value="<?php echo "Rp.  " . number_format($kolom['harga'], 0, ".", ","); ?>">
+                                                                    <input type="text" class="form-control" name="harga[]" id="h" value="<?php echo "$kolom[harga]"; ?>">
                                                                 </div>
                                                                 <td id="t" readonly>
-                                                                    <?php echo "Harga/items Rp. $kolom[harga]" ?>
+                                                                    <?php echo "Harga/items Rp. $kolom[harga]"; ?>
                                                                 </td>
                                                                 <td width="65">
                                                                     <div class="form-group" hidden>
-                                                                        <input type="text" class="form-control" name="id" value="<?php echo "$kolom[id_konsumen]" ?>">
-                                                                        <input type="text" class="form-control" name="pro[]" value="<?php echo "$kolom[id_produk]" ?>"></div>
+                                                                        <input type="text" class="form-control" name="id" value="<?php echo "$kolom[id_konsumen]"; ?>">
+                                                                        <input type="text" class="form-control" name="pro[]" value="<?php echo "$kolom[id_produk]"; ?>"></div>
                                                                     <input type="text" class="form-control" name="qrt[]" value="1">
 
                                                                 </td>
@@ -142,7 +141,7 @@ if (
 
                                         <?php } ?>
                                         <div class="form-group" hidden>
-                                            <input type="text" class="form-control" name="jlh" value="<?php echo "$ketemu" ?>">
+                                            <input type="text" class="form-control" name="jlh" value="<?php echo "$ketemu"; ?>">
                                         </div>
 
 

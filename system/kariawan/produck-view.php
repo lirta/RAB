@@ -96,7 +96,7 @@ if (
                                                             <td><?php echo "<img src='../assets/foto-produck/$kolom[gambar]' width='200xp'>"; ?></td>
                                                             <td><?php echo "$kolom[nama_produk]"; ?></td>
                                                             <td><?php echo "$kolom[nama_kategori]"; ?></td>
-                                                            <td><?php echo "$kolom[harga]"; ?></td>
+                                                            <td><?php echo "Rp.  " . number_format($kolom['harga'], 0, ".", ","); ?></td>
                                                             <td><?php echo "$kolom[keterangan]"; ?></td>
                                                             <td>
                                                                 <?php

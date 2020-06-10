@@ -109,7 +109,7 @@ if (
                                                                     $t = $t + $kp['jumlah'];
                                                                     echo "
                                                                             <ul>
-                                                                            <li> $pro[nama_produk]  <br> Jumlah = $kp[jumlah] <br> Harga = $pro[harga]</li>
+                                                                            <li> $pro[nama_produk]  <br> Jumlah = $kp[jumlah] <br> Harga/item = $pro[harga]</li>
                                                                             </ul>
                                                                             ";
                                                                     $h = $h + $kp['harga'];

@@ -51,13 +51,8 @@
                                     <li><a href="about.php">About</a></li>
                                     <li><a href="katalog.php">Katalog</a></li>
                                     <li><a href="gallery.php">Gallery</a></li>
-                                    <li><a href="#">Log in</a>
-                                        <ul class="submenu">
-                                            <li><a href="system/login-konsumen.php">Konsumen</a></li>
-                                            <li><a href="system/login.php">Kariawan</a></li>
-                                        </ul>
-                                    </li>
                                     <li><a href="contact.php">Contact</a></li>
+                                    <li><a href="system/index.php">Log in</a></li>
                                 </ul>
                             </nav>
                         </div>

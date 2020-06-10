@@ -15,7 +15,7 @@ if ($ketemu > 0) {
     $_SESSION['nama']            = $r['nama_konsumen'];
     $_SESSION['akses']           = "KONSUMEN";
     if ($_SESSION['akses'] == "KONSUMEN") {
-        header('location:../../konsumen/index.php');
+        header('location:../../index.php');
     }
 } else {
     echo '<script language="javascript">
